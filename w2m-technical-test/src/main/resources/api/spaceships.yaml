@@ -1,0 +1,129 @@
+all-spaceships:
+  get:
+    tags:
+      - spaceships
+    summary: Retrieves all spaceships
+    description: This opertaion allows to retrieve all spaceships from our database. We can decide the size and page wants to retrieve and apply a name filter.
+    operationId: getAllSpaceships
+    parameters:
+      - name: name
+        in: query
+        description: The retrieved spaceship must matches this filter name 
+        required: false
+        schema:
+          type: string
+          default: "" 
+      - name: page
+        in: query
+        description: The number of page we wants retrieving
+        required: false
+        schema:
+          type: integer
+          format: int32
+          default: 0
+          minium: 0
+      - name: size
+        in: query
+        description: Contains the number of elements must contains each retrieved page
+        required: false
+        schema:
+          type: integer
+          format: int32
+          default: 99
+          minium: 0
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '../model/spaceshipContract.yaml#/SpaceshipContract'
+  post:
+    tags:
+      - spaceships
+    summary: Creates a new spaceship
+    description: Allows to create a new entity in our database
+    operationId: createNewSpaceship
+    requestBody:
+      description: Contains the data about a new spaceship
+      content:
+        application/json:
+          schema:
+            $ref: '../model/spaceshipContract.yaml#/SpaceshipContract'
+      required: true
+    responses:
+      '201':
+        description: Created
+        content:
+          application/json:
+            schema:
+              $ref: '../model/spaceshipContract.yaml#/SpaceshipContract'
+spaceship-by-id:
+  get:
+    tags:
+      - spaceships
+    summary: Retrieves a spaceship by its identifier
+    description: This operation allows to retrieve a spaceship from database by the identifier of it
+    operationId: getSpaceshipById
+    parameters:
+      - name: id
+        in: path
+        description: Contains the spaceship's identifier
+        required: true
+        schema:
+          type: integer
+          format: int64
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '../model/spaceshipContract.yaml#/SpaceshipContract'
+  put:
+    tags:
+      - spaceships
+    summary: Modify a spaceship by its identifier
+    description: This operation allows to change the data about a spaceship
+    operationId: modifySpaceshipData
+    parameters:
+      - name: id
+        in: path
+        description: Contains the spaceship's identifier
+        required: true
+        schema:
+          type: integer
+          format: int64
+    requestBody:
+      description: Contains the data about the spaceship we are going to modify
+      content:
+        application/json:
+          schema:
+            $ref: '../model/spaceshipContract.yaml#/SpaceshipContract'
+      required: true
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '../model/spaceshipContract.yaml#/SpaceshipContract'
+  delete:
+    tags:
+      - spaceships
+    summary: Deletes a spaceship by its identifier
+    description: This operation allows to delete a spaceship from database
+    operationId: deleteSpaceship
+    parameters:
+      - name: id
+        in: path
+        description: Contains the spaceship's identifier
+        required: true
+        schema:
+          type: integer
+          format: int64
+    responses:
+      '200':
+        description: OK

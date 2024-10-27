@@ -1,0 +1,14 @@
+DELETE FROM SPACESHIPS;
+INSERT INTO SPACESHIPS (NAME) VALUES ('Millennium Falcon - Star Wars');
+INSERT INTO SPACESHIPS (NAME) VALUES ('Battlestar - Battlestar Galactica');
+INSERT INTO SPACESHIPS (NAME) VALUES ('Zarkov''s Rocket - Flash Gordon');
+INSERT INTO SPACESHIPS (NAME) VALUES ('Mothership - District 9');
+INSERT INTO SPACESHIPS (NAME) VALUES ('USS Enterprise (NCC-1701) - Star Trek');
+INSERT INTO SPACESHIPS (NAME) VALUES ('Endurance - Interstellar');
+INSERT INTO SPACESHIPS (NAME) VALUES ('Mothership - Encounters of the Third Phase');
+INSERT INTO SPACESHIPS (NAME) VALUES ('Flying Saucer - Independence Day');
+INSERT INTO SPACESHIPS (NAME) VALUES ('Discovery One - 2001: A Space Odyssey');
+INSERT INTO SPACESHIPS (NAME) VALUES ('Derelict - Alien Prometheus');
+INSERT INTO SPACESHIPS (NAME) VALUES ('TIE Bomber - Star Wars');
+INSERT INTO SPACESHIPS (NAME) VALUES ('TIE Defender - Star Wars');
+INSERT INTO SPACESHIPS (NAME) VALUES ('G´Quon Heavy Cruiser - Babylon 5.');

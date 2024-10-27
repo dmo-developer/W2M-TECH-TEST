@@ -1,0 +1,13 @@
+SpaceshipContract:
+  title: SpaceshipContract
+  type: object
+  properties:
+    identifier: 
+      type: integer
+      format: int64
+    spaceShipName:
+      type: string
+  x-examples:
+    example-1:
+      identifier: 11 
+      spaceShipName: 'x-wing' 

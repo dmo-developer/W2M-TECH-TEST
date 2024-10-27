@@ -1,0 +1,21 @@
+openapi: 3.1.0
+info:
+  title: W2M
+  description: The techical test for W2M by David de Miguel Otero
+  contact:
+    email: david.demiguel.otero@hotmail.es
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/dmo/w2m/api/spaceships
+paths:
+  /dmo/w2m/api/spaceships:
+    $ref: './api/spaceships.yaml#all-spaceships'
+  /dmo/w2m/api/spaceships/{id}:
+    $ref: './api/spaceships.yaml#spaceship-by-id'
+#components:
+#  schemas:
+#    SpaceshipContract:
+#      $ref: './model/spaceshipContract.yaml#/SpaceshipContract'
