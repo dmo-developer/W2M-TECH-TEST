@@ -35,8 +35,8 @@
 		<java.version>21</java.version>
 		<org.mapstruct.version>1.6.2</org.mapstruct.version>
 		<openapi-generator.version>7.3.0</openapi-generator.version>
-		<hibernate.validator.version>8.0.1.Final</hibernate.validator.version>
-		<jakarta.validation.version>3.1.0</jakarta.validation.version>
+		<jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
+		<springdoc-openapi-ui.version>1.8.0</springdoc-openapi-ui.version>
 	</properties>
 	<dependencies>
 		<!-- Dependencies for CRUD operations -->
@@ -82,12 +82,12 @@
 		<dependency>
 			<groupId>org.openapitools</groupId>
 			<artifactId>jackson-databind-nullable</artifactId>
-			<version>0.2.1</version>
+			<version>${jackson-databind-nullable.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.7.0</version>
+			<version>${springdoc-openapi-ui.version}</version>
 		</dependency>
 		<!-- Dependencies for TESTs -->
 		<dependency>
